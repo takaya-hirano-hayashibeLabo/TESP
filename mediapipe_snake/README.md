@@ -1,3 +1,12 @@
+# Environment Setup 
+
+## Procedure
+
+You can setup by following the steps below.
+
+1. [Setup gym](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/gym_setting/README_ENG.md)
+2. [Setup mujoco](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/mujoco_setting/README_ENG.md)
+
 # Control snake robot by human pose detection
 
 ## Human pose detection
