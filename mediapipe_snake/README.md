@@ -6,6 +6,11 @@ You can setup by following the steps below.
 
 1. [Setup gym](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/gym_setting/README_ENG.md)
 2. [Setup mujoco](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/mujoco_setting/README_ENG.md)
+3. install mediapipe
+
+   ```
+   pip install mediapipe==0.9.0.1
+   ```
 
 # Control snake robot by human pose detection
 
