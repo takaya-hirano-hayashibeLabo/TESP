@@ -8,7 +8,7 @@ import glfw
 def main():
 
     ## Setting ################
-    env = gym.make('Snake-v0')
+    env = gym.make('Snake-v0',render_mode="human")
     sim_timestep = 0.005 #[s]
     obs = env.reset()
     Done = False
@@ -29,7 +29,7 @@ def main():
         ## gym mujoco ##################################################
         env.render()
         glfw.set_window_size(env.viewer.window, width=1000, height=900)
-        obs, reward, done, info = env.step(action)
+        obs, reward, done, info,_= env.step(action)
         ################################################################
 
         time_step += 1

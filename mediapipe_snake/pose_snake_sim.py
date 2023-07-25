@@ -12,7 +12,7 @@ import math
 def main():
 
     ## Setting ######################################
-    env = gym.make('Snake-v0')
+    env = gym.make('Snake-v0', render_mode="human")
     ctrl_time_step  = 0.005 #[s]
     obs = env.reset()
     update = 50 # update capture every 50 step
@@ -73,7 +73,7 @@ def main():
             ## gym mujoco ##############################################################################################
             env.render()
             glfw.set_window_size(env.viewer.window, width=1000, height=900)#mujoco window size
-            obs, reward, done, info = env.step(action)
+            obs, reward, done, info,_ = env.step(action)
             ############################################################################################################
 
             time_step += 1
