@@ -1,6 +1,25 @@
 # Control snake robot by human pose detection
 
 ## Human pose detection
+=======
+# 1.Environment Setup 
+
+## Procedure
+
+You can setup by following the steps below.
+
+1. [Setup gym](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/gym_setting/README_ENG.md)
+2. [Setup mujoco](https://github.com/takaya-hirano-hayashibeLabo/manipulator/blob/main/documents/mujoco_setting/README_ENG.md)
+3. install mediapipe
+
+   ```
+   pip install mediapipe==0.9.0.1
+   ```
+
+# 2.Control snake robot by human pose detection
+
+## 2.1.Human pose detection
+
 Pose detection by mediapipe
 
 [mediapipe_test.py](mediapipe_test.py)
@@ -11,7 +30,11 @@ Pose detection by mediapipe
 python mediapipe_test.py
 ```
 
+
 ## Control snake in simulator
+=======
+## 2.2.Control snake in simulator
+
 Control snake robot in simulator(gym,mujoco).
 
 **set initial joint angle**
@@ -29,7 +52,11 @@ Control snake robot in simulator(gym,mujoco).
 python snake_sim_test.py
 ```
 
+
 ## Control snake robot by human pose detection (simulation)
+=======
+## 2.3.Control snake robot by human pose detection (simulation)
+
 
 [pose_snake_sim.py](pose_snake_sim.py)
 
@@ -40,7 +67,11 @@ python pose_snake_sim.py
 ```
 
 
+
 ## Control snake robot by human pose detection (real robot)
+=======
+## 2.4.Control snake robot by human pose detection (real robot)
+
 
 [pose_snake_real.py](pose_snake_real.py)
 
