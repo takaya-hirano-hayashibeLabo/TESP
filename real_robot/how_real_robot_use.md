@@ -87,7 +87,8 @@ import keyboard
 from math import pi
 
 PORT=5000
-CLIENT="192.168.0.112"
+CLIENT="192.168.0.111"
+# CLIENT="192.168.0.112" #IP address may be 192.168.0.112...
 
 
 def main():
@@ -134,6 +135,58 @@ You can control the head servo motor by keyboard.
 <img src="resources/image-5.gif" width=600>
 
 </center>
+
+### 3. Syncronization of Socket Connection
+
+You need to synchronize connection cycle between the snake robot and your PC.  
+Connection cycle per second is **0.12 sec**,  
+so you need to send datas to the robot in every 0.12 seconds.  
+
+Following script is a example to send datas per 0.12 sec.
+~~~python
+from socket import socket,AF_INET,SOCK_DGRAM
+import time
+import keyboard
+from math import pi,sin
+
+PORT=5000
+CLIENT="192.168.0.111"
+# CLIENT="192.168.0.112"
+
+
+def main():
+    sock=socket(AF_INET,SOCK_DGRAM)
+
+
+    t_interval=0.12 #[s] socket connection cycle
+    t_now=time.perf_counter()
+    t_prev=t_now
+
+    while True:
+
+        ##For Synchronization
+        ##skip process until 0.12 seconds have elapsed.
+        t_now=time.perf_counter()
+        if t_now-t_prev<t_interval:
+            continue
+        t_prev=t_now #update 't_prev'
+        ##
+
+        try:
+            head_radian=pi/9.2*sin(t_now)
+            msg=f"{head_radian},0,0,0,0,0,0,0,0,0,0,0"
+            sock.sendto(msg.encode("utf-8"),(CLIENT,PORT))
+
+        except KeyboardInterrupt:
+            break
+
+        print("your message : ",msg,"elapsed_time : ",time.perf_counter())
+
+
+if __name__=="__main__":
+    main()
+~~~
+
 
 ## Turn Off the Snake Robot
 Input following command.
