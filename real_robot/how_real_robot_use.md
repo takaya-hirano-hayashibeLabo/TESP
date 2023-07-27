@@ -14,7 +14,9 @@ Connect 2 codes for power of RaspberryPi and motors as shown below.
 
 On your PC, open the terminal and input this command below.
 ~~~bash
-ssh pi@192.168.0.112
+ssh pi@192.168.0.111
+# IP address may be 192.168.0.112...
+# If you can not access to 192.168.0.111, please try 192.168.0.112.
 ~~~
 You have to also input password.  
 Password is 'hayashibelab'.
