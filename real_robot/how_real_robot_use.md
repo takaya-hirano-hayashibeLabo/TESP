@@ -1,5 +1,13 @@
 # How the Real Snake Robot Use
 
+## Wifi Connection
+At first, you need to connect Labo's Wifi.
+~~~bash
+SSID HayashibeLabWifi
+Password 96553961
+~~~
+
+
 ## Robot Setting
 
 Connect 2 codes for power of RaspberryPi and motors as shown below.
